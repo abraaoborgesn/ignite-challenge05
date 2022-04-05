@@ -1,1 +1,80 @@
-// TODO
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.posts {
+    max-width: 720px;
+    // margin-top: 3.1rem;
+    margin-bottom: 2rem;
+
+    a {
+        display: block;
+
+        & + a {
+            margin-top: 2rem;
+            padding-top: 2rem;
+        }
+
+        strong {
+            display: block;
+            font-size: 1.75rem;
+            color: var(--heading);
+            line-height: 2rem;
+
+            transition: color .2s;
+        }
+
+        &:hover strong {
+            color: var(--yellow)
+        }
+
+        p {
+            margin-top: .5rem;
+            color: var(--body);
+            line-height: 1.36125rem;
+        }
+
+        .info {
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+
+            .user {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--info);
+
+                time {
+                    margin-left: .5rem;
+                }
+
+                span {
+                    margin-left: .5rem;
+                }
+
+                & + .user {
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+    }
+
+    button {
+        display: block;
+        margin-top: 4rem;
+        color: var(--highlight);
+        font-size: 1.125rem;
+        line-height: 1.36125rem;
+        border: none;
+        background-color: transparent;
+
+        transition: filter .2s;
+        &:hover {
+            filter: brightness(.9);
+        }
+    }
+}
